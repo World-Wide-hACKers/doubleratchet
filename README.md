@@ -33,9 +33,9 @@ of them could message each other from the very beginning.
 ### Cryptographic primitives 
 
 1. **GENERATE_DH():** Curve25519
-1. **KDF_RK(rk, dh_out):** HKDF with SHA-256
-1. **KDF_CK(ck):** HMAC with SHA-256 and constant inputs
-1. **ENCRYPT(mk, pt, associated_data):** AES-256-CTR with HMAC-SHA-256 and IV derived alongside an encryption key
+1. **KDF_RK(rk, dh_out):** HKDF with ~~SHA-256~~ DivHash
+1. **KDF_CK(ck):** HMAC with ~~SHA-256~~ DivHash and constant inputs
+1. **ENCRYPT(mk, pt, associated_data):** AES-256-CTR with ~~HMAC-SHA-256~~ HMAC-DIVHASH-256 and IV derived alongside an encryption key
 
 ## Loki's Notes:
 
